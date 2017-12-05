@@ -815,7 +815,7 @@ class Visdom(object):
         X = np.squeeze(X)
         assert X.ndim == 1 or X.ndim == 2, 'X should be one or two-dimensional'
         if X.ndim == 1:
-            X = X[:, None]
+            X = X[None, :]
         if Y is not None:
             Y = np.squeeze(Y)
             assert Y.ndim == 1, 'Y should be one-dimensional'
